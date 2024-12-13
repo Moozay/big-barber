@@ -1,44 +1,27 @@
 import NextLogo from "./next-logo";
+import { Button } from "./ui/button";
+import Link from "next/link";
 import SupabaseLogo from "./supabase-logo";
 
 export default function Header() {
   return (
-    <div className="flex flex-col gap-16 items-center">
-      <div className="flex gap-8 justify-center items-center">
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <SupabaseLogo />
-        </a>
-        <span className="border-l rotate-45 h-6" />
-        <a href="https://nextjs.org/" target="_blank" rel="noreferrer">
-          <NextLogo />
-        </a>
+    <div className="flex flex-col gap-16 bg-cover bg-center bg-no-repeat h-screen text-white bg-blend-darken bg-black bg-opacity-50 w-full"
+      style={{ backgroundImage: "url('/imgs/hero-banner.jpg')" }}
+    >
+      <div className="flex flex-col items-center">
+      <div className="flex p-20 mt-5 text-9xl font-bold text-center">BARBERS & HAIR CUTTING</div>
+      <div className="flex p-20 font-bold leading-relaxed w-2/3 text-center">SINCE 1999, V's BARBERSHOP HAS BEEN ON A MISSION TO REDEFINE THE MEN'S GROOMING INDUSTRY. WITH OVER 60 AUTHENTIC BARBERSHOPS NATIONWIDE, A CURATED SELECTION OF MEN'S GROOMING PRODUCTS AND PREMIUM SERVICE OFFERINGS... V's IS BRINGING BACK HANDSOME. ONE GENTLEMAN AT A TIME.</div>
+      <Button
+              asChild
+              size="sm"
+              variant={"default"}
+              className="flex max-w-60 bg-orange-400 hover:bg-orange-300"
+            >
+              <Link href="/reservation">CREATE RESERVATION</Link>
+            </Button>
       </div>
-      <h1 className="sr-only">Supabase and Next.js Starter Template</h1>
-      <p className="text-3xl lg:text-4xl !leading-tight mx-auto max-w-xl text-center">
-        The fastest way to build apps with{" "}
-        <a
-          href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Supabase
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://nextjs.org/"
-          target="_blank"
-          className="font-bold hover:underline"
-          rel="noreferrer"
-        >
-          Next.js
-        </a>
-      </p>
       <div className="w-full p-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent my-8" />
+     
     </div>
   );
 }
