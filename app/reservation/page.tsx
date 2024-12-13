@@ -56,11 +56,7 @@ export default function Signup() {
         <h1 className="text-3xl font-bold text-center mb-4">Book Appointment</h1>
         <p className="text-sm text-center text-gray-600">
           Already have a reservation?{" "}
-<<<<<<< HEAD
           <Link className="text-primary font-medium underline" href="/">
-=======
-          <Link className="text-primary font-medium underline" href="/sign-in">
->>>>>>> 642ad33 (First commit)
             Confirm here
           </Link>
         </p>
